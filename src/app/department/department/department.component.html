@@ -1,0 +1,31 @@
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+      <th scope="col">DepatrmentID</th>
+      <th scope="col">DepatrmentName</th>
+      <th scope="col">DepatrmentLocation</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row">{{ department.id }}</th>
+      <td>{{ department.deptName }}</td>
+      <td>{{ department.location }}</td>
+    </tr>
+    <tr>
+      <th scope="row"><input type="number" #t1 /></th>
+      <td><input type="text" #t2 /></td>
+      <td><input type="text" #t3 /></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <button
+          class="btn btn-primary"
+          (click)="handelInputs(t1.value, t2.value, t3.value)"
+        >
+          submit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

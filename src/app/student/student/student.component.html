@@ -1,0 +1,36 @@
+
+
+<table class="table table-bordered text-center">
+  <thead>
+    <tr>
+      <th scope="col">StudentID</th>
+      <th scope="col">StudentName</th>
+      <th scope="col">StudentDepartment</th>
+      <th scope="col">StudentDepartment</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
+    <tr>
+      <th scope="row">{{ student.id }}</th>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.deptno }}</td>
+    </tr>
+    <tr>
+      <th scope="row"><input type="number" #t1 /></th>
+      <td><input type="text" #t2 /></td>
+      <td><input type="number" #t3 /></td>
+      <td><input type="number" #t4 /></td>
+    </tr>
+    <tr>
+      <td colspan="4">
+        <button
+          class="btn btn-primary"
+          (click)="handelInputs(t1.value, t2.value, t3.value, t4.value)"
+        >
+          submit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
